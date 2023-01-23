@@ -9,4 +9,4 @@
        pip install -r requirements.txt
        
 - run terminal
-        python manage.p runserver
+        python manage.py runserver
