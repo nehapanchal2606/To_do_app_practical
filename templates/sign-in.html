@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Congrats!</strong> {{ message }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endfor %}
+        {% endif %}
+                            <h2>Login</h2>
+                            
+     
+	
+					
+					
+								<form action="{% url 'login' %}" method="post">
+									{% csrf_token %}
+									{{form.as_p}}
+									
+									<p>
+										<input
+                                         type="submit" value="login">
+									</p>
+									<p >Don't have account <a href="{% url 'signup' %}">Register</a></p>
+								</form>
+							
+{% endblock %}
