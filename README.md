@@ -1,4 +1,4 @@
-# To_do_app_practical
+# to do App 
 
 # for run this project 
 - create virtual environment using
